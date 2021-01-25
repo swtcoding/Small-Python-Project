@@ -9,5 +9,11 @@ def get_valid_word(words):
     return word.upper()
 
 def hangman():
+    word = get_valid_word(words)
+    word_letters = set(word)
+    
+    while len(word) > 0:
+        user_word = input("Guess a word:")
+        if user
 
 

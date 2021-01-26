@@ -15,10 +15,18 @@ def hangman():
     used_letters = set()
     
     while len(word) > 0:
+
+        print("You have gussed: " + " ".join(used_letters))
+
         user_letters = input("Guess a word:")
+
         if user_letters in alphabet - used_letters:
             used_letters.append(user_letters)
             if user_letters in word_letters:
                 word_letters.remove(user_letters)
+        elif user_letters in used_letters:
+            print("The character has been used. Try another one!")
+        else:
+            print("Invalid choice. Please try again.")
 
-
+print(hangman())

@@ -17,8 +17,10 @@ def hangman():
     while len(word) > 0:
 
         print("You have gussed: " + " ".join(used_letters))
-
         user_letters = input("Guess a word:")
+
+        word_list = [letter if letter in used_letters else '_' for letter in word]
+        print("Current words ", " ".join(word_list))
 
         if user_letters in alphabet - used_letters:
             used_letters.append(user_letters)

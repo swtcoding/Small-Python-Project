@@ -21,7 +21,7 @@ def hangman():
         word_list = [letter if letter in used_letters else '-' for letter in word]
         print("Current words: ", " ".join(word_list))
 
-        user_letters = input("Guess a word:")
+        user_letters = input("Guess a word: ")
 
         if user_letters in alphabet - used_letters:
             used_letters.add(user_letters)
